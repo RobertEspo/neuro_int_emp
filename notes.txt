@@ -1,0 +1,13 @@
+Are there ERP component correlates to declarative vs interrogative processing?
+
+When do people realize they have heard an info-seeking absolute interrogative? Do native Spanish speakers and native English speakers pay attention to different things? Do different Spanish varieties pay attention to different things?
+
+Why are higher empathy L2 speakers better at determining if a sentence is a declarative vs interrogative? Do ERPs of higher empathy vs lower empathy folk look different when processing L2 intonation?
+
+Mariano habla del tiempo.
+Mariano habla del tiempo?
+
+ERP components when we hear a sentence with a low-pass filter?
+If using a low-pass filter, participants will have to make a direct judgement (i.e., "Is this a question?").
+
+If not using a low-pass filter, participants could either (a) make a direct judgement, (b) answer a content-related question "Quien habla del tiempo?", (c) choose an appropriate response to the sentence "Sí, habla del tiempo" or "Estoy de acuerdo, habla del tiempo mucho", or (d) does the punctuation match the audio?

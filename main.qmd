@@ -1,0 +1,97 @@
+---
+title             : |
+  Empathy Conditions ERP Responses to Interrogatives
+shorttitle        : "ERP PROSODY CORRELATES"
+author            : 
+  - name: Robert Esposito
+    corresponding: true
+    affiliations: Rutgers University
+    email: rme70@rutgers.edu
+  - name: Nuria Sagarra
+    affiliations: Rutgers University
+    email: 
+    orcid: 
+
+bibliography      : "./lit/polite_bib.bib"
+csl               : "./lit/apa_7th_edition.csl"
+indent: true
+
+format:
+  docx:
+    reference-doc: "./ref_doc/apa_style.docx"
+    number-sections: false
+    highlight-style: github
+    code-line-numbers: true
+    fig-align: center
+    tbl-colwidths: true
+    mermaid:
+      theme: neutral
+    mermaid-format: png
+
+editor_options: 
+  markdown: 
+    wrap: sentence
+metadata: 
+  subject: linguistics
+  description: "L2 Intonational Phonology"
+  category: article
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+# Set document defaults
+knitr::opts_chunk$set(
+  cache.extra = knitr::rand_seed, 
+  fig.retina = 2, 
+  echo = F, 
+  message = F, 
+  warning = F,
+  fig.asp = 0.5625,
+  out.width = "100%",
+  dpi = 300, 
+  fig.path = 'figs/', 
+  dev = c("png", "pdf")
+  )
+
+library("here")
+library("fs")
+library("dplyr")
+library("tidyr")
+library("stringr")
+```
+
+{{< pagebreak >}}
+
+# Author note {.unnumbered}
+
+Correspondence concerning this article should be addressed to Robert Esposito, Rutgers University - Department of Spanish and Portuguese, 15 Seminary Place, New Brunswick, NJ 08904, USA . E-mail: rme70@rutgers.edu.
+
+{{< pagebreak >}}
+
+# Abstract {.unnumbered}
+
+This is where the abstract will go.
+
+*Keywords:* ERP, EEG, prosody, intonation, interrogatives, empathy
+
+*Word count:* WORD_COUNT
+
+{{< pagebreak >}}
+
+
+# `r rmarkdown::metadata$title`
+
+# Introduction
+
+
+
+# Scraps
+
+Are declaratives and interrogatives processed differently in the brain? When declaratives and information-seeking absolute interrogatives are differentiated only by intonation, what ERP responses correlate with the two modalities?
+
+Empathy correlates with more attention to intonation. Are there ERP diffs between high vs low empathy individuals when processing intonation?
+L2 Spanish learners with higher empathy are more accurate at identifying a declarative vs an absolute interrogative based on intonation alone -- can this be reflected in ERP responses? (Casillas).
+L1 French speakers with higher empathy make greater use of intonation to disambiguate words in on-line processing (D'Imperio, eye-tracking).
+L1 Italian speakers with higher intonation and more experience with other varieties have more gradient perception of intonation (Orrico).

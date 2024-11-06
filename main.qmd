@@ -87,6 +87,7 @@ This is where the abstract will go.
 
 
 
+
 # Scraps
 
 Are declaratives and interrogatives processed differently in the brain? When declaratives and information-seeking absolute interrogatives are differentiated only by intonation, what ERP responses correlate with the two modalities?

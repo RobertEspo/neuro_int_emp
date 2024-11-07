@@ -9,10 +9,10 @@ author            :
     email: rme70@rutgers.edu
   - name: Nuria Sagarra
     affiliations: Rutgers University
-    email: 
-    orcid: 
+    email: nuria.sagarra@rutgers.edu
+    orcid: 0000-0002-9820-3935
 
-bibliography      : "./lit/polite_bib.bib"
+bibliography      : "./lit/neuro_bib.bib"
 csl               : "./lit/apa_7th_edition.csl"
 indent: true
 
@@ -85,14 +85,52 @@ This is where the abstract will go.
 
 # Introduction
 
+Recent behavioral research in both monolingual [@orrico2020individual, @esteve2020empathy] and bilingual [@casillas2023using] populations has investigated the role of pragmatic skills, such as empathy [@baron2004empathy], in the processing of intonation. However, little research has explored the neurophysiological correlates that reveal *how* empathy modulates intonation processing [@aziz2010common]. The current study aims to address this gap by investigating Event-Related Potential (ERP) correlates of higher empathy L1 English L2 Spanish late bilinguals when explicitly deciding if a spoken Spanish sentence is a declarative or interrogative. By identifying the neurophysiological mechanisms underlying empathy's role in L2 intonation processing, this study will contribute to the growing literature on the role of individual differences and pragmatic skills in L2 acquisition, as well as identify specific ERP components -- such as the N400, P600, and Late Positive Component (LPC) -- that are modulated by pragmatic skills during intonation processing.
 
+# Background and Motivation
 
+## Individual Differences and Empathy
+
+Proficiency has long been the focus of L2 processing literature [@reichle2016working], but recent studies have turned to investigating the impact of other individual differences, such as working memory (WM), language use, and empathy. The expansion to include other factors into L2 language processing models has been fruitful. Many researchers find that higher WM, for example, acts as a reliable predictor of L2 learners' sensitivity to agreement violations [@sagarra2013processing], morphosyntactic violations [@mcdonald2006beyond], and relative clause disambiguation via verbal agreement [@havik2009processing]. Likewise, language use has been found to condition specific brain structure and function adaptations [@deluca2019redefining; @hervais2020neurobiology] and greater resting state alpha power [@bice2020bilingual]. These studies demonstrate that bilingual language processing should not be viewed as a monolith that is solely determined by proficiency, but that it is conditioned by a variety of individual factors.
+
+Empathy is yet another individual difference measure that is typically described in the literature as having an *affective* and *cognitive* component [@baron2004empathy]. Affective empathy describes an observer's emotional response to another's emotions; cognitive empathy is the ability to set aside one's own mental state to consider or infer another's, which can lead to predicting another's behavior or mental state. Empathy is an important pragmatic skill that allows individuals to effectively mobilize in the social world. @baron2004empathy introduces the Empathy Quotient (EQ), a self-report questionnaire that maps an individual's empathy on a scale of zero to 80. This instrument has been used in the extant literature investigating empathy and linguistic perception [e.g., @esteve2020mapping; @orrico2020individual; @casillas2023using].
+
+Researchers have investigated the effects of bilingualism on the development and modulation of empathy [@rodriguez2022language; @javor2016bilingualism], but there is scarce research of empathy's role in second language acquisition. @guiora1972, for instance, tried to link empathy to "authentic pronunciation" of an L2, but no strong associations have been found. In contemporary research, the few studies that do exist are reviewed below.
+
+Although empathy has received little attention as a factor modulating L2 acquisition or development, there is empirical [@esteve2020mapping; @orrico2020individual; @casillas2023using; @aziz2010common] and theoretical motivation to investigate a possible link. Empathy is directly linked with pragmatic skills, such as establishing and updating common ground [@stalnaker2002common] or accurately interpreting sarcasm [@filik2019difference]. The Shallow Structure Hypothesis (SSH) [@clahsen2006native; @clahsen2006grammatical; @clahsen2018some] posits that L2 learners must parse L2 sentences shallowly due to underdeveloped grammar, which fails to provide the detailed structural information needed for L1-like processing. Thus, L2 learners rely more on lexical, semantic, and, relevant here, _pragmatic_ information when their L2 grammar cannot provide the necessary structural information.
+
+## Intonation and the Autosegmental Metrical Framework
+
+Since empathy is linked with pragmatic skill, it makes sense that one of the most influential areas of empathy on language would be in intonation. Within the Autosegmental Metrical (AM) model of intonation (@pierrehumbert1980submitted; @ladd2008intonational), the continuous intonation contour is mapped to discrete, sequential tone targets that are compositional in nature (although this last point is debated [@orrico2020individual]). Regardless of the specifics, it is clear that intonation plays a strong role in the expression of pragmatic meaning, thus associating it with empathy. Of note for the current study is the role that intonation plays in sentence modality. In languages like English and Spanish, identical strings of words can be produced with different intonation contours to distinguish it as a declarative and an interrogative.
+
+## Empathy and Intonation
+
+Recent behavioral studies have investigated the role of empathy in the perception of intonation in both monolingual and bilingual populations. In monolingual populations, for example, @orrico2020individual found that higher empathy Italian monolinguals have access to finer-grain distinctions in intonation-meaning mapping. Also in a monolingual population, @esteve2020empathy used a visual world paradigm eye-tracking task with French monolinguals that resembled a card guessing game in which target items were homophones. Only after the target item was the homophone lexically disambiguated. Importantly, the temporary lexical ambiguity caused by the target items could be resolved with an intonational cue. @esteve2020empathy found that only higher empathy individuals varied their looking behavior, conditioned by the intonational cue. Interestingly, their looking behavior actually focused on the distractor image, not the correct image. Due to the unexpected results, @esteve2020empathy completed a post hoc off-line behavioral task in which participants listened to the sentence only up to the target homophone (and thus, the homophone is never lexically disambiguated) and had to match the homophone to the correct image. Higher empathy individuals were significantly more accurate than lower empathy individuals. @esteve2020empathy explain the unexpected eye-tracking results by proposing that higher empathy are more sensitive to all possible alternative interpretations, but still map intonation to the most plausible. This proposal is in line with what @baron2004empathy describes as the cognitive component of empathy, and has correspondences with Theory of Mind [@frith2003development].
+
+In the first study that investigates interactions of empathy and intonation in a bilingual population, @casillas2023using conceptually replicates @brandl2020development. L1 English L2 Spanish participants listened to sentences and had to explicitly decide if it was a question or not. @casillas2023using found an interaction between empathy and Spanish proficiency, measured by vocabulary size via the LexTALE [@izura2014lextale], such that lower proficiency individuals with higher empathy were more accurate. Interestingly, they found that these same individuals were also slower than their low empathy counterparts. 
+
+Empathy has remained largely uninvestigated using neurolinguistic methodologies, such as electroencephalogram (EEG) or fMRI, despite the growing evidence that it impacts both monolingual and bilingual language processing. [@aziz2010common].
+
+## N400, P600, and LPC
+
+## Empathy and Language Processing
 
 # Scraps
 
-Are declaratives and interrogatives processed differently in the brain? When declaratives and information-seeking absolute interrogatives are differentiated only by intonation, what ERP responses correlate with the two modalities?
+Empathy [@baron2004empathy] has been found to modulate perception of intonation in the L1 [@orrico2020individual; @esteve2020empathy], as well as the L2 [@casillas2023using], but the specific neurophysiological correlates that underlie empathy's role in intonation processing remain uninvestigated. In the L1, higher empathy individuals have been found to show more granular interpretations of epistemic bias [@orrico2020individual] and to be more sensitive to intonational cues when developing a set of possible interpretations and selecting the most likely one [@esteve2020empathy]. In the L2, higher empathy individuals have been found to respond more accurately, albeit slower, when determining if a spoken sentence is a declarative or interrogative [@casillas2023using]. The current research aims to contribute to the growing body of literature on the role of pragmatic skills and individual differences on L2 acquisition by investigating L1 English L2 Spanish late bilinguals by investigating Event-Related Potential (ERP) correlates of empathy in intonation processing. Specifically, continuing the line of research began by @casillas2023using, are there 
 
-Empathy correlates with more attention to intonation. Are there ERP diffs between high vs low empathy individuals when processing intonation?
-L2 Spanish learners with higher empathy are more accurate at identifying a declarative vs an absolute interrogative based on intonation alone -- can this be reflected in ERP responses? (Casillas).
-L1 French speakers with higher empathy make greater use of intonation to disambiguate words in on-line processing (D'Imperio, eye-tracking).
-L1 Italian speakers with higher intonation and more experience with other varieties have more gradient perception of intonation (Orrico).
+The extant research on language processing has identified that individual differences is a consequential factors for the L2 acquisition process. 
+
+For example,  experience-based factors in bilingual language use impacts brain structure and functional connectivity [@deluca2019redefining]; 
+
+Although there exists research investigating the effects of bilingualism on the development or modulation of empathy [@rodriguez2022language; @javor2016bilingualism], empathy has received little attention in contemporary research as a modulating factor of linguistic processing. Researchers from the 60s and 70s [e.g., @guiora1972empathy] have tried to link empathy to "authentic pronunciation" of an L2, but no strong associations have been found. 
+
+Empathy is responsible for allowing individuals to infer another's mental state, which is critical for establishing and updating common ground [@stalnaker2002common]. Furthermore, empathy is critical in understanding an interlocuter's sarcasm or insincere utterance [@filik2019difference]. 
+
+{{< pagebreak >}}
+
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

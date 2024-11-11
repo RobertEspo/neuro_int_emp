@@ -109,11 +109,11 @@ Recent behavioral studies have investigated the role of empathy in the perceptio
 
 In the first study that investigates interactions of empathy and intonation in a bilingual population, @casillas2023using conceptually replicates @brandl2020development. L1 English L2 Spanish participants listened to sentences and had to explicitly decide if it was a question or not. @casillas2023using found an interaction between empathy and Spanish proficiency, measured by vocabulary size via the LexTALE [@izura2014lextale], such that lower proficiency individuals with higher empathy were more accurate. Interestingly, they found that these same individuals were also slower than their low empathy counterparts. 
 
-Empathy has remained largely uninvestigated using neurolinguistic methodologies, such as electroencephalogram (EEG) or fMRI, despite the growing evidence that it impacts both monolingual and bilingual language processing. [@aziz2010common].
+Empathy has remained largely uninvestigated using neurolinguistic methodologies, such as electroencephalogram (EEG) or fMRI, despite the growing behavioral evidence indicating that it impacts both monolingual and bilingual language processing. @aziz2010common performed an fMRI study to investigate if production and perception of intonation was modulated by empathy. Unlike the previously mentioned studies, @aziz2010common used the EMPATHY TEST ONE and EMPATHY TEST TWO as measurements of empathy, as well as an off-line prosodic ability test. 
+
+In the on-line production task, participants were asked to produce the nonsense phrase "da da da da da" with varying intonation that matched a presented image of a smiling, sad, questioning or neutral face. In the on-line perception task, they were presented no image, but listened to the phrase "da da da da da". @aziz2010common found that higher empathy individuals showed more activity during the perception of emotional, but not neutral, intonation in premotor areas, including the bilateral inferior frontal gyrus and premotor cortex. They propose that the increased activity is related to simulation processes in the motor-related areas. That is, higher empathy individuals, in the vein of *cognitive empathy*, simulate how they would produce the given intonation to understand someone else's.
 
 ## N400, P600, and LPC
-
-## Empathy and Language Processing
 
 # Scraps
 
@@ -125,7 +125,7 @@ For example,  experience-based factors in bilingual language use impacts brain s
 
 Although there exists research investigating the effects of bilingualism on the development or modulation of empathy [@rodriguez2022language; @javor2016bilingualism], empathy has received little attention in contemporary research as a modulating factor of linguistic processing. Researchers from the 60s and 70s [e.g., @guiora1972empathy] have tried to link empathy to "authentic pronunciation" of an L2, but no strong associations have been found. 
 
-Empathy is responsible for allowing individuals to infer another's mental state, which is critical for establishing and updating common ground [@stalnaker2002common]. Furthermore, empathy is critical in understanding an interlocuter's sarcasm or insincere utterance [@filik2019difference]. 
+Empathy is responsible for allowing individuals to infer another's mental state, which is critical for establishing and updating common ground [@stalnaker2002common]. Furthermore, empathy is critical in understanding an interlocutor's sarcasm or insincere utterance [@filik2019difference].
 
 {{< pagebreak >}}
 

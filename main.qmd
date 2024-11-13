@@ -115,18 +115,15 @@ In the on-line production task, participants were asked to produce the nonsense 
 
 In sum, there is clear evidence that empathy impacts both monolingual and bilingual processes, but in exactly what ways are still unclear. @esteve2020empathy propose that higher empathy monolinguals compute more possible interpretations, which seems to imply longer processing time. This is prediction is borne out by @casillas2023using, where higher empathy bilinguals had slower reaction times (although overall more accurate responses) than their lower empathy counterparts. This study attempts to elucidate which part of sentence processing is responsible for the slower reaction times.
 
-## ERP Components
+# Research Questions
 
-I expect slower reaction times to correspond to later components.
+1) Can the results of @casillas2023using be replicated in a slightly different experimental design? That is, are low proficiency late bilinguals who have higher empathy more sensitive to intonation to distinguish sentence modality?
 
-### N400
+2) @casillas2023using found that high empathy individuals at all proficiencies had slower reaction times. What ERP components, if any, are associated with high empathy individuals that could elicit slower reaction times?
 
-N400. Greater N400 for high empathy.
+# Hypotheses
 
-### P600
-
-P600. Reevaluation of sentence. Greater for mismatch condition, even greater for high empathy folks.
-
+I expect slower reaction times to correspond to later ERP components. @esteve2020empathy proposed that high empathy individuals invoked higher level processing to consider all possible interpretations of the stimulus. This processing would be relevant to N400 and P600 components. The N400 component, known to be modulated by expectations, would evoke a greater response in mismatch conditions for high empathy individuals, indicating a greater sensitivity to intonation. The P600, typically associated with syntactic reanalysis, would also be greater for high empathy individuals. A higher P600 could be associated with what @esteve2020empathy proposed: that high empathy individuals consider all possible meanings and their proportional likelihoods. Furthermore, @aziz2010common proposed that high empathy individuals consider how they themselves would produce a given utterance when perceiving speech. In this case, this could be reflected in later components, as well.
 
 # Methodology
 

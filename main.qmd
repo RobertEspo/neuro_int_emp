@@ -117,9 +117,13 @@ In sum, there is clear evidence that empathy impacts both monolingual and biling
 
 # Research Questions
 
-1) Can the results of @casillas2023using be replicated in a slightly different experimental design? That is, are low proficiency late bilinguals who have higher empathy more sensitive to intonation to distinguish sentence modality?
+1) Is reaction time to identifying sentence modality in Spanish by L1 English L2 Spanish late bilinguals modulated by empathy [@casillas2023using]?
 
-2) @casillas2023using found that high empathy individuals at all proficiencies had slower reaction times. What ERP components, if any, are associated with high empathy individuals that could elicit slower reaction times?
+2) Are high empathy bilinguals more sensitive to intonation when identifying sentence modality [@brandl2020development; @casillas2023using]?
+
+3) In mismatch conditions, are greater N400 and P600 components associated with high empathy individuals?
+
+4) In match conditions, do high empathy individuals exhibit more broadly distributed late positivity components than their low individual counterparts?
 
 # Hypotheses
 
@@ -131,7 +135,13 @@ Match/Mismatch design.
 
 Participants will see fixation cross. See image of person with speech bubble. Inside speech bubble is a period or question mark. Image disappears. Listen to sentence. "¿La frase coincide con la imagen?"
 
+Areas of interest: syllable directly to the left of the nuclear pitch accent; nuclear pitch accented syllable; syllable directly to the right of the nuclear pitch accent.
+
 # Scraps
+
+Maybe just single, three-syllable penultimate stressed words? control for syllable structure e.g., CV.CV.CV CVC.CVC.CVC CV.CVC.CV CV.CVC.CVC CV.CV.CVC. 
+
+Closure Positivity needs to be addressed.
 
 Empathy/Proficiency only interacted for wh- questions, broad focus statements, and narrow focus statements for accuracy. Response times for all conditions were impacted by empathy/proficiency interaction. Higher empathy individuals took longer to respond (Casillas).
 

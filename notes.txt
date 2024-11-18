@@ -11,3 +11,18 @@ ERP components when we hear a sentence with a low-pass filter?
 If using a low-pass filter, participants will have to make a direct judgement (i.e., "Is this a question?").
 
 If not using a low-pass filter, participants could either (a) make a direct judgement, (b) answer a content-related question "Quien habla del tiempo?", (c) choose an appropriate response to the sentence "Sí, habla del tiempo" or "Estoy de acuerdo, habla del tiempo mucho", or (d) does the punctuation match the audio?
+
+
+### 
+
+# R NOTES:
+
+janitor::clean_names(). Used to standardize col names to better names.
+
+###
+
+Nuria meeting 11/18
+
+Add working memory test to exp & corresponding literature.
+Add wrap up effects background.
+Add Chinese intonation experiments.

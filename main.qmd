@@ -101,41 +101,79 @@ Although empathy has received little attention as a factor modulating L2 acquisi
 
 ## Intonation and the Autosegmental Metrical Framework
 
-Since empathy is linked with pragmatic skill, it makes sense that one of the most influential areas of empathy on language would be in intonation. Within the Autosegmental Metrical (AM) model of intonation (@pierrehumbert1980submitted; @ladd2008intonational), the continuous intonation contour is mapped to discrete, sequential tone targets that are compositional in nature (although this last point is debated [@orrico2020individual]). Regardless of the specifics, it is clear that intonation plays a strong role in the expression of pragmatic meaning, thus associating it with empathy. Of note for the current study is the role that intonation plays in sentence modality. In languages like English and Spanish, identical strings of words can be produced with different intonation contours to distinguish it as a declarative and an interrogative. It has already been shown that higher empathy late bilinguals are more sensitive to intonation for distinguishing sentence modality [@casillas2023using], but the specific mechanisms have yet to be elucidated.
+Since empathy is linked with pragmatic skill, it makes sense that one of the most influential areas of empathy on language would be in intonation. Within the Autosegmental Metrical (AM) model of intonation [@pierrehumbert1980submitted; @ladd2008intonational], the continuous intonation contour is mapped to discrete, sequential tone targets that are compositional in nature (although this last point is debated [@orrico2020individual]). The Tones and Break Indices tool, originally developed for English [@silverman1992tobi] and later expanded to Spanish [@beckman2002intonation], is used within AM to annotate intonation. Discrete pitch targets can be H, L, or a combination of such to represent rises (e.g., LH) or falls (e.g., HL). Focused on in the present study are boundary tones, marked by a percentage sign (e.g., H% would be a high boundary tone target; HL% could be a final rise-fall, although the amount of phonetic detail included in these representations is dependent on the researcher). Boundary tones are associated with the right edge of largest prosodic unit, the Intonation Phrase (IP). Typically, boundary tones for absolute interrogatives are rising (e.g., H%) in Spanish (@prieto2010transcription), but some dialects, such as Puerto Rican Spanish [@armstrong2010puerto], use a fall (e.g., L%). Partial wh- questions, broad focus declaratives, and narrow focus declaratives are typically produced with a fall.
+
+However, boundary tones are not the only cue that indicates if something is of a specific sentence type, and is in fact temporally the final cue amongst many, all of which contribute to sentence-type identification for L1 Spanish speakers [@face2007role]. Despite that, as it is the final cue, it may be the most salient and accessible for L2 Spanish speakers. The present study investigates the boundary tone as a locus for deciding sentence modality in L2 Spanish.
+
+## LILT Model
+
+*NOTE: COPIED FROM SOCIO PAPER, NEED TO REVIEW, CUT DOWN, AND ADD RELEVANCE*
+
+AM has been primarily developed to investigate L1 intonation, but there have been recent attempts to expand intonation investigation into the L2 domain. For example, @mennen2015beyond has proposed the theoretical model L2 Intonation Learning Theory (LILt). Four dimensions of intonation are recognized under this model with the goal of characterizing the similarities and differences between the intonation inventories between two languages:
+
+1. The inventory and distribution of categorical phonological elements ("systemic" dimension)
+2. The phonetic implementation of these categorical elements ("realizational" dimension)
+3. The functionality of the categorical elements of tunes ("semantic" dimension)
+4. The frequency of use of the categorical elements ("frequency" dimension)
+
+
+The LILt model, as demonstrated by the specified dimensions, are primarily concerned with L1-L2 transfer effects. That is, it is predicted that a language learner acquiring an L2 will experience positive transfer effects when the intonation systems align along one or more dimensions, whereas they will experience negative transfer when they do not align. For example, English and Spanish differ in how they express polite responses to wh-questions. Where English uses a broad pitch range in its rises, represented with by the nuclear configuration L+¡H\* (where **¡** represents an extra high tone), Spanish uses a narrow pitch range, represented by L+H* [@estebas2014evaluation].
+
+The differences here have a significant impact on the acquisition of Spanish by L1 English speakers. English speakers have available to them L+H\* [@dilley2013role], the expected contour in Spanish ("systemtic" dimension). It is realized phonetically similarly, although the English L+H\* typically has a broader pitch range [for English: @beckman1997guidelines; for Spanish: @prieto2010transcription] ("realizational" dimension"). The "frequency" dimension is defined at a more general level by @mennen2015beyond and would require more space than attributed here to investigate the frequency differences of tone primitives in English and Spanish. However, crucially, there is a mismatch in the *semantic* dimension. Where English uses L+¡H\* as an appropriate, polite response to a wh-question, Spanish does not pattern in this way; instead, it is mapped to an "over-excited" response, which could give rise to misinterpretation when learners interact with monolingual L1 Spanish speakers.
 
 ## Empathy and Intonation
 
+It is clear that intonation plays a strong role in the expression of pragmatic meaning, thus associating it with empathy. Of note for the current study is the role that intonation plays in sentence modality. In languages like English and Spanish, identical strings of words can be produced with different intonation contours to distinguish it as a declarative and an interrogative. It has already been shown that higher empathy late bilinguals are more sensitive to intonation for distinguishing sentence modality [@casillas2023using], but the specific mechanisms have yet to be elucidated.
+
 Recent behavioral studies have investigated the role of empathy in the perception of intonation in both monolingual and bilingual populations. In monolingual populations, for example, @orrico2020individual found that higher empathy Italian monolinguals have access to finer-grain distinctions in intonation-meaning mapping. Also in a monolingual population, @esteve2020empathy used a visual world paradigm eye-tracking task with French monolinguals that resembled a card guessing game in which target items were homophones. Only after the target item was the homophone lexically disambiguated. Importantly, the temporary lexical ambiguity caused by the target items could be resolved with an intonational cue. @esteve2020empathy found that only higher empathy individuals varied their looking behavior, conditioned by the intonational cue. Interestingly, their looking behavior actually focused on the distractor image, not the correct image. Due to the unexpected results, @esteve2020empathy completed a post hoc off-line behavioral task in which participants listened to the sentence only up to the target homophone (and thus, the homophone is never lexically disambiguated) and had to match the homophone to the correct image. Higher empathy individuals were significantly more accurate than lower empathy individuals. @esteve2020empathy explain the unexpected eye-tracking results by proposing that higher empathy are more sensitive to all possible alternative interpretations, but still map intonation to the most plausible. This proposal is in line with what @baron2004empathy describes as the cognitive component of empathy, and has correspondences with Theory of Mind [@frith2003development].
 
-In the first study that investigates interactions of empathy and intonation in a bilingual population, @casillas2023using conceptually replicates @brandl2020development. L1 English L2 Spanish participants listened to sentences and had to explicitly decide if it was a question or not. @casillas2023using found an interaction between empathy and Spanish proficiency, measured by vocabulary size via the LexTALE [@izura2014lextale], such that lower proficiency individuals with higher empathy were more accurate. Interestingly, they found that these same individuals were also slower than their low empathy counterparts. 
+In the first study that investigates interactions of empathy and intonation in a bilingual population, @casillas2023using conceptually replicates @brandl2020development. L1 English L2 Spanish participants listened to sentences and had to explicitly decide if it was a question or not. @casillas2023using found an interaction between empathy and Spanish proficiency, measured by vocabulary size via the LexTALE [@izura2014lextale], such that lower proficiency individuals with higher empathy were more accurate. Interestingly, they found that these same individuals were also slower than their low empathy counterparts. However, @casillas2023using did not control for the specific intonational contours present in the stimuli, such that there was variety within and across speakers of different varieties. The present study controls for the intonational contour, specifically boundary tones.
 
 Empathy has remained largely uninvestigated using neurolinguistic methodologies, such as electroencephalogram (EEG) or fMRI, despite the growing behavioral evidence indicating that it impacts both monolingual and bilingual language processing. @aziz2010common performed an fMRI study to investigate if production and perception of intonation was modulated by empathy. Unlike the previously mentioned studies, @aziz2010common used the Interpersonal Reactivity Index [@davis1983measuring] and the Psychopathic Personality Inventory-Revised [@lilienfeld2005psychopathic] as measurements of empathy, as well as an off-line prosodic ability test. 
 
 In the on-line production task, participants were asked to produce the nonsense phrase "da da da da da" with varying intonation that matched a presented image of a smiling, sad, questioning or neutral face. In the on-line perception task, they were presented no image, but listened to the phrase "da da da da da". @aziz2010common found that higher empathy individuals showed more activity during the perception of emotional, but not neutral, intonation in premotor areas, including the bilateral inferior frontal gyrus and premotor cortex. They propose that the increased activity is related to simulation processes in the motor-related areas. That is, higher empathy individuals, in the vein of *cognitive empathy*, simulate how they would produce the given intonation to understand someone else's.
 
-In sum, there is clear evidence that empathy impacts both monolingual and bilingual processes, but in exactly what ways are still unclear. @esteve2020empathy propose that higher empathy monolinguals compute more possible interpretations, which seems to imply longer processing time. This is prediction is borne out by @casillas2023using, where higher empathy bilinguals had slower reaction times (although overall more accurate responses) than their lower empathy counterparts. This study attempts to elucidate which part of sentence processing is responsible for the slower reaction times.
+In sum, there is clear evidence that empathy impacts both monolingual and bilingual processes, but in exactly what ways are still unclear. @esteve2020empathy propose that higher empathy monolinguals compute more possible interpretations, which seems to imply longer processing time. This prediction is borne out by @casillas2023using, where higher empathy bilinguals had slower reaction times (although overall more accurate responses) than their lower empathy counterparts. This study attempts to elucidate which part of sentence processing is responsible for the slower reaction times.
 
-# Research Questions
+# Research Questions and Hypotheses
 
-1) Is reaction time to identifying sentence modality in Spanish by L1 English L2 Spanish late bilinguals modulated by empathy [@casillas2023using]?
+1) Is reaction time to identifying sentence modality in Spanish by L1 English L2 Spanish late bilinguals modulated by empathy?
 
-2) Are high empathy bilinguals more sensitive to intonation when identifying sentence modality [@brandl2020development; @casillas2023using]?
+This is expected to be the case, based off of research conducted by @casillas2023using.
 
-3) In mismatch conditions, are greater N400 and P600 components associated with high empathy individuals?
+2) Are high empathy bilinguals more sensitive to intonation when identifying sentence modality?
 
-4) In match conditions, do high empathy individuals exhibit more broadly distributed late positivity components than their low individual counterparts?
+This is expected to be the case, based off of research conducted by @casillas2023using.
 
-# Hypotheses
+3) In mismatch conditions, are greater N400 components associated with high empathy individuals?
 
-I expect slower reaction times to correspond to later ERP components. @esteve2020empathy proposed that high empathy individuals invoked higher level processing to consider all possible interpretations of the stimulus. This processing would be relevant to N400 and P600 components. The N400 component, known to be modulated by expectations, would evoke a greater response in mismatch conditions for high empathy individuals, indicating a greater sensitivity to intonation. The P600, typically associated with syntactic reanalysis, would also be greater for high empathy individuals. A higher P600 could be associated with what @esteve2020empathy proposed: that high empathy individuals consider all possible meanings and their proportional likelihoods. Furthermore, @aziz2010common proposed that high empathy individuals consider how they themselves would produce a given utterance when perceiving speech. In this case, this could be reflected in later components, as well.
+It is expected that high empathy individuals are more sensitive to intonation, which will present itself as a greater violation of expectations in mismatch conditions, eliciting larger a larger N400.
+
+4) In match conditions, do high empathy individuals exhibit more broadly distributed late positivity components (e.g. P600) than their low empathy counterparts?
+
+High empathy individuals take longer to decide if an utterance is an interrogative or declarative [@casillas2023using], and it is predicted that the longer processing time is associated with late components. This prediction is based on the proposal by @esteve2020empathy, who posited that high empathy individuals take into account all possible interpretations. This is expected to be seen as a late, broadly distributed ERP component.
+
+5) Where Spanish and English do not coincide in the marking of sentence type with boundary tone (e.g., Puerto Rican fall for absolute interrogatives, where English would have a rise), do high empathy individuals exhibit lower N400s?
+
+High empathy individuals were found to be more accurate at identifying sentence modality [@casillas2023using]. This study will investigate if the boundary tone is perhaps the main cue for identifying sentence modality. It is expected that in low empathy individuals, their main cue will be the boundary tone. When it does not coincide with the boundary tone expected in English, they will exhibit larger N400s, whereas high empathy individuals will exhibit a smaller, if any, N400 [@mennen2015beyond]. 
 
 # Methodology
 
 Match/Mismatch design.
 
-Participants will see fixation cross. See image of person with speech bubble. Inside speech bubble is a period or question mark. Image disappears. Listen to sentence. "¿La frase coincide con la imagen?"
+Participants will see fixation cross. See image of person with speech bubble. Inside speech bubble is a period or question mark. Image disappears. Listen to sentence (which will have a rising or falling boundary tone, coinciding with natural intonation across Spanish varieties). Text appears on screen: "¿La frase coincide con la imagen?" Participants clicks keyboard key for yes or no.
 
-Areas of interest: syllable directly to the left of the nuclear pitch accent; nuclear pitch accented syllable; syllable directly to the right of the nuclear pitch accent.
+Area of interest: start of final syllable.
+
+Independent variables:
+  empathy
+  proficiency (lextale)
+  boundary tone (H, L)
+  match with English
+  sentence type       EN boundary tone        ES boundary tone        match?
+  y-n Q               H%                        H% or L%                meh
+  wh- Q               H%                        L%                    no
+  declaratives        L%                        L%                    yes
 
 # Scraps
 

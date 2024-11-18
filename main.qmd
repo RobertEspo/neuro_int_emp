@@ -105,6 +105,10 @@ Since empathy is linked with pragmatic skill, it makes sense that one of the mos
 
 However, boundary tones are not the only cue that indicates if something is of a specific sentence type, and is in fact temporally the final cue amongst many, all of which contribute to sentence-type identification for L1 Spanish speakers [@face2007role]. Despite that, as it is the final cue, it may be the most salient and accessible for L2 Spanish speakers. The present study investigates the boundary tone as a locus for deciding sentence modality in L2 Spanish.
 
+## Spanish Question Intonation Cues
+
+Include here the relevant study.
+
 ## LILT Model
 
 *NOTE: COPIED FROM SOCIO PAPER, NEED TO REVIEW, CUT DOWN, AND ADD RELEVANCE*
@@ -121,6 +125,8 @@ The LILt model, as demonstrated by the specified dimensions, are primarily conce
 
 The differences here have a significant impact on the acquisition of Spanish by L1 English speakers. English speakers have available to them L+H\* [@dilley2013role], the expected contour in Spanish ("systemtic" dimension). It is realized phonetically similarly, although the English L+H\* typically has a broader pitch range [for English: @beckman1997guidelines; for Spanish: @prieto2010transcription] ("realizational" dimension"). The "frequency" dimension is defined at a more general level by @mennen2015beyond and would require more space than attributed here to investigate the frequency differences of tone primitives in English and Spanish. However, crucially, there is a mismatch in the *semantic* dimension. Where English uses L+¡H\* as an appropriate, polite response to a wh-question, Spanish does not pattern in this way; instead, it is mapped to an "over-excited" response, which could give rise to misinterpretation when learners interact with monolingual L1 Spanish speakers.
 
+The current study will take into account @mennan2015beyond by comparing analogous intonation contours (e.g., H% for absolute interrogatives in a majority of Spanish varieties and English), as well as contrasting contours (e.g., L% for absolute interrogatives, which occurs in Caribbean varieties of Spanish, but does not occur in English).
+
 ## Empathy and Intonation
 
 It is clear that intonation plays a strong role in the expression of pragmatic meaning, thus associating it with empathy. Of note for the current study is the role that intonation plays in sentence modality. In languages like English and Spanish, identical strings of words can be produced with different intonation contours to distinguish it as a declarative and an interrogative. It has already been shown that higher empathy late bilinguals are more sensitive to intonation for distinguishing sentence modality [@casillas2023using], but the specific mechanisms have yet to be elucidated.
@@ -129,9 +135,25 @@ Recent behavioral studies have investigated the role of empathy in the perceptio
 
 In the first study that investigates interactions of empathy and intonation in a bilingual population, @casillas2023using conceptually replicates @brandl2020development. L1 English L2 Spanish participants listened to sentences and had to explicitly decide if it was a question or not. @casillas2023using found an interaction between empathy and Spanish proficiency, measured by vocabulary size via the LexTALE [@izura2014lextale], such that lower proficiency individuals with higher empathy were more accurate. Interestingly, they found that these same individuals were also slower than their low empathy counterparts. However, @casillas2023using did not control for the specific intonational contours present in the stimuli, such that there was variety within and across speakers of different varieties. The present study controls for the intonational contour, specifically boundary tones.
 
+## EEG
+
+### Empathy
+
 Empathy has remained largely uninvestigated using neurolinguistic methodologies, such as electroencephalogram (EEG) or fMRI, despite the growing behavioral evidence indicating that it impacts both monolingual and bilingual language processing. @aziz2010common performed an fMRI study to investigate if production and perception of intonation was modulated by empathy. Unlike the previously mentioned studies, @aziz2010common used the Interpersonal Reactivity Index [@davis1983measuring] and the Psychopathic Personality Inventory-Revised [@lilienfeld2005psychopathic] as measurements of empathy, as well as an off-line prosodic ability test. 
 
 In the on-line production task, participants were asked to produce the nonsense phrase "da da da da da" with varying intonation that matched a presented image of a smiling, sad, questioning or neutral face. In the on-line perception task, they were presented no image, but listened to the phrase "da da da da da". @aziz2010common found that higher empathy individuals showed more activity during the perception of emotional, but not neutral, intonation in premotor areas, including the bilateral inferior frontal gyrus and premotor cortex. They propose that the increased activity is related to simulation processes in the motor-related areas. That is, higher empathy individuals, in the vein of *cognitive empathy*, simulate how they would produce the given intonation to understand someone else's.
+
+### Intonation
+
+Although there is little research using neurolinguistic methodologies for Spanish or English intonation, there does exist a variety of works on Mandarin [@lu2015intonation; @li2018temporal], Catalan [@borras2012role], German [@kharaman2019processing; @lialiou2024auditory], and a variety of Limburgish [@fournier2010lateralization].
+
+@li2018temporal investigates the temporal processing of intonation in Mandarin Chinese by comparing F0 changes produced by intonation or lexical tone in two tasks. In the intonation task, participants identified whether the sentence was a statement or question; in the tone task, participants identified the tone (tone 2 or tone 4) of the final word. They found that participants processed intonation first in both tasks: around 150-200ms in the first task, and 100ms in the second.
+
+### Wrap up Effects
+
+One of the earliest EEG correlates of intonation discovered is the Closure Positive Shift [CPS; @steinhauer1999brain; @steinhauer2003electrophysiological]. 
+
+## Summary
 
 In sum, there is clear evidence that empathy impacts both monolingual and bilingual processes, but in exactly what ways are still unclear. @esteve2020empathy propose that higher empathy monolinguals compute more possible interpretations, which seems to imply longer processing time. This prediction is borne out by @casillas2023using, where higher empathy bilinguals had slower reaction times (although overall more accurate responses) than their lower empathy counterparts. This study attempts to elucidate which part of sentence processing is responsible for the slower reaction times.
 
@@ -158,8 +180,6 @@ High empathy individuals take longer to decide if an utterance is an interrogati
 High empathy individuals were found to be more accurate at identifying sentence modality [@casillas2023using]. This study will investigate if the boundary tone is perhaps the main cue for identifying sentence modality. It is expected that in low empathy individuals, their main cue will be the boundary tone. When it does not coincide with the boundary tone expected in English, they will exhibit larger N400s, whereas high empathy individuals will exhibit a smaller, if any, N400 [@mennen2015beyond]. 
 
 # Methodology
-
-Match/Mismatch design.
 
 Participants will see fixation cross. See image of person with speech bubble. Inside speech bubble is a period or question mark. Image disappears. Listen to sentence (which will have a rising or falling boundary tone, coinciding with natural intonation across Spanish varieties). Text appears on screen: "¿La frase coincide con la imagen?" Participants clicks keyboard key for yes or no.
 
@@ -192,6 +212,10 @@ For example,  experience-based factors in bilingual language use impacts brain s
 Although there exists research investigating the effects of bilingualism on the development or modulation of empathy [@rodriguez2022language; @javor2016bilingualism], empathy has received little attention in contemporary research as a modulating factor of linguistic processing. Researchers from the 60s and 70s [e.g., @guiora1972empathy] have tried to link empathy to "authentic pronunciation" of an L2, but no strong associations have been found. 
 
 Empathy is responsible for allowing individuals to infer another's mental state, which is critical for establishing and updating common ground [@stalnaker2002common]. Furthermore, empathy is critical in understanding an interlocutor's sarcasm or insincere utterance [@filik2019difference].
+
+"It is interesting to notice that most of our ERP results are found in the parietal area, which is
+consistent with the previous findings of intonation and tone effects in centro-parietal area (Kung et
+al., 2014; Liu et al., 2016)."
 
 {{< pagebreak >}}
 

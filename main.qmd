@@ -1,7 +1,7 @@
 ---
 title             : |
-  Empathy Conditions ERP Responses in High Empathy Bilinguals
-shorttitle        : "ERP EMPATHY CORRELATES"
+  "¿Es una Pregunta?": An ERP Study on the Perception of Early Intonational Cues in Spanish Learners
+shorttitle        : "ERP: Early Intonational Cue Perception in L2 Spanish"
 author            : 
   - name: Robert Esposito
     corresponding: true
@@ -19,7 +19,7 @@ indent: true
 format:
   docx:
     reference-doc: "./ref_doc/apa_style.docx"
-    number-sections: false
+    number-sections: true
     highlight-style: github
     code-line-numbers: true
     fig-align: center
@@ -33,7 +33,7 @@ editor_options:
     wrap: sentence
 metadata: 
   subject: linguistics
-  description: "L2 Intonational Phonology and Empathy"
+  description: "L2 Intonational Phonology"
   category: article
 ---
 
@@ -60,6 +60,8 @@ library("fs")
 library("dplyr")
 library("tidyr")
 library("stringr")
+library("knitr")
+library("kableExtra")
 ```
 
 {{< pagebreak >}}
@@ -72,9 +74,9 @@ Correspondence concerning this article should be addressed to Robert Esposito, R
 
 # Abstract {.unnumbered}
 
-This is where the abstract will go.
+Accurately parsing intonation is crucial for a language like Spanish, where declaratives and absolute interrogatives are syntactically and lexically, and only differ in intonation. Although the final pitch movement is the main cue for determining sentence modality in Spanish, the first pitch peak of the utterance acts as a secondary cue [@face2007role]. This study uses EEG to investigate the sensitivity to early pitch accents for identifying sentence modality in L1 English L2 Spanish individuals of varying proficiency levels. Participants completed a two-alternative forced choice task, in which they were tasked with identifying an utterance was question or not. In the target items, participants were exposed to utterances in which the first pitch accent peak was manipulated to be higher (for base-declarative utterances) or lower (for base-interrogative utterances). Under the Associative Learning hypothesis [@kamin1969selective], it would be expected that the initial learners of Spanish pay attention only to the final pitch movement to determine sentence modality, which is the most salient cue and, in most varieties of Spanish, follows universal language tendencies. Due to this, the manipulated stimuli would elicit no N400, which has been seen to be elicited by anomalous pitch accents. Advanced learners, on the other hand, would be sensitive to other intonational cues, such as the peak height of the first pitch accent, and the anomalous pitch accent would thus elicit an N400.
 
-*Keywords:* ERP, EEG, prosody, intonation, interrogatives, empathy
+*Keywords:* ERP, EEG, prosody, intonation, suprasegmental, interrogatives
 
 *Word count:* WORD_COUNT
 
@@ -83,35 +85,51 @@ This is where the abstract will go.
 
 # `r rmarkdown::metadata$title`
 
-# Introduction
+# Introduction {#sec-intro}
 
-Recent behavioral research in both monolingual [@orrico2020individual, @esteve2020empathy] and bilingual [@casillas2023using] populations has investigated the role of pragmatic skills, such as empathy [@baron2004empathy], in the processing of intonation. However, little research has explored the neurophysiological correlates that reveal *how* empathy modulates intonation processing [@aziz2010common]. The current study aims to address this gap by investigating Event-Related Potential (ERP) correlates of higher empathy L1 English L2 Spanish late bilinguals when explicitly deciding if a spoken Spanish sentence is a declarative or interrogative. By identifying the neurophysiological mechanisms underlying empathy's role in L2 intonation processing, this study will contribute to the growing literature on the role of individual differences and pragmatic skills in L2 acquisition, as well as identify specific ERP components -- such as the N400 and P600 -- that are modulated by pragmatic skills during intonation processing.
+Native speakers integrate intonational cues in the speech stream temporally early in on-line speech processing [@li2018temporal], but do learners make use of the same cues? In Spanish, declaratives and absolute interrogatives are syntactically and lexically ambiguous [@tbl-eg-sentences]; they are only disambiguated at the intonational level through modulation of fundamental frequency (F0), the rate of vocal fold vibration perceived as pitch. Traditional analysis of Spanish prosody typically points to the final F0 movement of an utterance in determining if an utterance is a declarative or interrogative [@tomas1944manual], but recent research by @face2007role has determined in a gating experiment that native Spanish speakers can distinguish between a declarative and absolute interrogative as early as the first stressed syllable of the sentence. Do learners of Spanish make use of the same intonational cues to predict sentence modality?
 
-# Background and Motivation
+```{r}
+#| label: tbl-eg-sentences
+#| tbl-cap: "Spanish declarative and absolute interrogative."
 
-## Individual Differences and Empathy
+eg_sentences <- data.frame(
+  sentence_type = c("declarative", "absolute interrogative"),
+  spanish = c("Mariano habla del tiempo.", "¿Mariano habla del tiempo?"),
+  english = c("Mariano talks about the weather.", "Does Mariano talk about the weather?")
+)
 
-Proficiency has long been the focus of L2 processing literature [@reichle2016working], but recent studies have turned to investigating the impact of other individual differences, such as working memory (WM), language use, and empathy. The expansion to include other factors into L2 language processing models has been fruitful. Many researchers find that higher WM, for example, acts as a reliable predictor of L2 learners' sensitivity to agreement violations [@sagarra2013processing], morphosyntactic violations [@mcdonald2006beyond], and relative clause disambiguation via verbal agreement [@havik2009processing]. Likewise, language use has been found to condition specific brain structure and function adaptations [@deluca2019redefining; @hervais2020neurobiology] and greater resting state alpha power [@bice2020bilingual]. These studies demonstrate that bilingual language processing should not be viewed as a monolith that is solely determined by proficiency, but that it is conditioned by a variety of individual factors.
+kable(
+  eg_sentences,
+  format = "markdown",
+  col.names = c("Sentence Type", "Spanish", "English")
+)
 
-Empathy is yet another individual difference measure that is typically described in the literature as having an *affective* and *cognitive* component [@baron2004empathy]. Affective empathy describes an observer's emotional response to another's emotions; cognitive empathy is the ability to set aside one's own mental state to consider or infer another's, which can lead to predicting another's behavior or mental state. Empathy is an important pragmatic skill that allows individuals to effectively mobilize in the social world. @baron2004empathy introduces the Empathy Quotient (EQ), a self-report questionnaire that maps an individual's empathy on a scale of zero to 80. This instrument has been used in the extant literature investigating empathy and linguistic perception [e.g., @esteve2020empathy; @orrico2020individual; @casillas2023using].
+```
 
-Researchers have investigated the effects of bilingualism on the development and modulation of empathy [@rodriguez2022language; @javor2016bilingualism], but there is scarce research of empathy's role in second language acquisition. @guiora1972empathy, for instance, tried to link empathy to "authentic pronunciation" of an L2, but no strong associations have been found. In contemporary research, the few studies that do exist are reviewed below.
+# Background and Motivation {#sec-background}
 
-Although empathy has received little attention as a factor modulating L2 acquisition or development, there is empirical [@esteve2020empathy; @orrico2020individual; @casillas2023using; @aziz2010common] and theoretical motivation to investigate a possible link. Empathy is directly linked with pragmatic skills, such as establishing and updating common ground [@stalnaker2002common] or accurately interpreting sarcasm [@filik2019difference]. The Shallow Structure Hypothesis (SSH) [@clahsen2006native; @clahsen2006grammatical; @clahsen2018some] posits that L2 learners must parse L2 sentences shallowly due to underdeveloped grammar, which fails to provide the detailed structural information needed for L1-like processing. Thus, L2 learners rely more on lexical, semantic, and, relevant here, _pragmatic_ information when their L2 grammar cannot provide the necessary structural information.
+## Autosegmental Metrical Framework {#sec-am}
 
-## Intonation and the Autosegmental Metrical Framework
+While some languages simultaneously use F0 to encode semantic meaning at the lexical level (e.g., Mandarin Chinese or Swedish), all languages make use of F0 to encode pragmatic meaning [@arvaniti2020autosegmental] such as sentence type or affect. Spanish and English are among the languages that modulate F0 to provide syntactic structure [@steinhauer1999brain] and pragmatic information [@ladd2008intonational].
 
-Since empathy is linked with pragmatic skill, it makes sense that one of the most influential areas of empathy on language would be in intonation. Within the Autosegmental Metrical (AM) model of intonation [@pierrehumbert1980submitted; @ladd2008intonational], the continuous intonation contour is mapped to discrete, sequential tone targets that are compositional in nature (although this last point is debated [@orrico2020individual]). The Tones and Break Indices tool, originally developed for English [@silverman1992tobi] and later expanded to Spanish [@beckman2002intonation], is used within AM to annotate intonation. Discrete pitch targets can be H, L, or a combination of such to represent rises (e.g., LH) or falls (e.g., HL). Focused on in the present study are boundary tones, marked by a percentage sign (e.g., H% would be a high boundary tone target; HL% could be a final rise-fall, although the amount of phonetic detail included in these representations is dependent on the researcher). Boundary tones are associated with the right edge of largest prosodic unit, the Intonation Phrase (IP). Typically, boundary tones for absolute interrogatives are rising (e.g., H%) in Spanish (@prieto2010transcription), but some dialects, such as Puerto Rican Spanish [@armstrong2010puerto], use a fall (e.g., L%). Partial wh- questions, broad focus declaratives, and narrow focus declaratives are typically produced with a fall.
+The Autosegmental Metrical (AM) model of intonation [@pierrehumbert1980submitted; @ladd2008intonational] attempts to map the continuous F0 contour to phonologically discrete, sequential tone targets. Tone targets can be H(igh), L(ow), or a combination of the two to represent rises (LH) or falls (HL), which are organized as either pitch accents, anchored to the stressed syllable, or edge tones anchored to prosodic boundaries. Edge tones are furthered divided into phrase accents and boundary tones, anchored to non-terminal prosodic boundaries and the Intonation Phrase boundary, respectively. Using the Tones and Breaks Indices (ToBI), the annotation tool used within AM, pitch accents are indicated with \* (e.g., H\*); non-final edge tones with - (e.g., H-); and boundary tones with % (e.g., H%). These representations and phonetic realizations are part of a many-to-many relationship, such that a single representation, such as H+L\*, may have various phonetic realizations. This parallels segmental phonology, where a single segment, such as the Spanish /b/, may have various realizations depending on numerous contextual factors, such as a bilabial plosive, bilabial approximant, or labio-dental fricative. 
 
-However, boundary tones are not the only cue that indicates if something is of a specific sentence type, and is in fact temporally the final cue amongst many, all of which contribute to sentence-type identification for L1 Spanish speakers [@face2007role]. Despite that, as it is the final cue, it may be the most salient and accessible for L2 Spanish speakers. The present study investigates the boundary tone as a locus for deciding sentence modality in L2 Spanish.
+Furthermore, the final pitch accent (deemed the nuclear pitch accent) combined with the boundary tone receive a special status as the nuclear configuration, which is typically mapped to sentence type [@prieto2010transcription]. However, @pierrehumbert1980submitted proposed that prenuclear accents (i.e., pitch accents that occur to the left of the nuclear pitch accent) also contribute information to the sentence. The current study investigates the contribution of prenuclear pitch accents to on-line sentence processing and prediction of sentence modality.
 
-## Spanish Question Intonation Cues
+## L1 Intonation Processing {#sec-l1-processing}
 
-Include here the relevant study.
+Although intonation is typically viewed as ancillary to the core grammar of a language, there have been recent pushes to consider the integrity of intonation and its place in encoding semantico-pragmatic functions such as speech act marking, information status, belief status, and politeness [@prieto2015intonational]. Neurocognitive studies on intonation have repeatedly demonstrated that manipulating intonation inhibits sentence processing [@steinhauer1999brain; @mourao2006intonation; @li2018temporal], supporting claims by intonational phonologists that intonation is a critical component of a language's grammar.
 
-## LILT Model
+Some of the earliest studies on intonation discovered a late ERP component, the Closure Positive Shift (CPS), which is associated with the right side of an Intonational Phrase [@steinhauer1999brain]. This component is found even during reading, indicating that intonation is implicitly activated during this activity [@steinhauer2003electrophysiological]. Importantly, these components, deemed "wrap-up effects", may mask other ERP components elicited at the same temporal moment. It is therefore difficult to examine utterance-final on-line processing. Due to this difficulty, the present study focuses on processing of earlier cues in the speech stream, instead of the final boundary tone.
 
-*NOTE: COPIED FROM SOCIO PAPER, NEED TO REVIEW, CUT DOWN, AND ADD RELEVANCE*
+The N400 component, typically elicited by semantically incongruous or "unexpected" elements in a sentence [@kutas1980reading], have also been found to be elicited by inappropriate or missing pitch accents. For example, @magne2005line investigated anomalous pitch accents in question-answer dialogues in L1 French. For example, they provided participants with the questions "Did he give his fiancée a ring or a bracelet?" or "Did he give a ring to his fiancée or his sister?" The answer to both questions were syntactically and lexically identical, "He gave a ring to his fiancée", and differed only in pitch accents on "ring" and "fiancée" (e.g., "He gave a *ring* to his fiancée" would be an inappropriate response to the latter question). Participants were tasked with judging if the answer was a coherent response with respect to the question. @magne2005line found that incongruous pitch accents in sentence-medial positions elicited the P3a and P3b components, while those in sentence-final position elicited the N400. They interpreted these results as increased difficulty in sentence processing. The results from @magne2005line have also been seen, although with slight variation to the specific ERP components, in English [@johnson2003erp] and Japanese [@ito2004brain].
+
+@li2018temporal investigates the temporal processing of intonation in Mandarin Chinese by comparing F0 changes produced by intonation or lexical tone in two tasks. In the intonation task, participants identified whether the sentence was a statement or question; in the tone task, participants identified the tone (tone 2 or tone 4) of the final word. They found that participants processed intonation first in both tasks: around 150-200ms in the first task after the target word, and 100ms in the second. @li2018temporal took these results to indicate the primacy that intonation has in language, appealing to evolutionary roots that prosodic cues have in human language.
+
+The cited studies indicate that intonational cues are integrated during on-line sentence processing in L1 speakers. 
+
+## L2 Intonation Learning Theory {#sec-l2-learning}
 
 AM has been primarily developed to investigate L1 intonation, but there have been recent attempts to expand intonation investigation into the L2 domain. For example, @mennen2015beyond has proposed the theoretical model L2 Intonation Learning Theory (LILt). Four dimensions of intonation are recognized under this model with the goal of characterizing the similarities and differences between the intonation inventories between two languages:
 
@@ -120,102 +138,140 @@ AM has been primarily developed to investigate L1 intonation, but there have bee
 3. The functionality of the categorical elements of tunes ("semantic" dimension)
 4. The frequency of use of the categorical elements ("frequency" dimension)
 
-
 The LILt model, as demonstrated by the specified dimensions, are primarily concerned with L1-L2 transfer effects. That is, it is predicted that a language learner acquiring an L2 will experience positive transfer effects when the intonation systems align along one or more dimensions, whereas they will experience negative transfer when they do not align. For example, English and Spanish differ in how they express polite responses to wh-questions. Where English uses a broad pitch range in its rises, represented with by the nuclear configuration L+¡H\* (where **¡** represents an extra high tone), Spanish uses a narrow pitch range, represented by L+H* [@estebas2014evaluation].
 
 The differences here have a significant impact on the acquisition of Spanish by L1 English speakers. English speakers have available to them L+H\* [@dilley2013role], the expected contour in Spanish ("systemtic" dimension). It is realized phonetically similarly, although the English L+H\* typically has a broader pitch range [for English: @beckman1997guidelines; for Spanish: @prieto2010transcription] ("realizational" dimension"). The "frequency" dimension is defined at a more general level by @mennen2015beyond and would require more space than attributed here to investigate the frequency differences of tone primitives in English and Spanish. However, crucially, there is a mismatch in the *semantic* dimension. Where English uses L+¡H\* as an appropriate, polite response to a wh-question, Spanish does not pattern in this way; instead, it is mapped to an "over-excited" response, which could give rise to misinterpretation when learners interact with monolingual L1 Spanish speakers.
 
-The current study will take into account @mennan2015beyond by comparing analogous intonation contours (e.g., H% for absolute interrogatives in a majority of Spanish varieties and English), as well as contrasting contours (e.g., L% for absolute interrogatives, which occurs in Caribbean varieties of Spanish, but does not occur in English).
+Relevant to the present study, no research investigating the LILt model using neurocognitive methodologies were found. Furthermore, early intonation components (i.e., prenuclear pitch accents) are oftentimes left unexamined in favor of the more salient nuclear configuration (i.e., the final pitch accent and boundary tone), which is typically mapped to sentence type [@ladd2008intonational]. The present study investigates the integration of prenuclear pitch accent information in on-line sentence processing, which will provide valuable information for assessing the LILt model's predictions about L2 intonation acquisition.
 
-## Empathy and Intonation
+## L2 Intonation Acquisition (Behavioral Studies) {#sec-l2-behavioral}
 
-It is clear that intonation plays a strong role in the expression of pragmatic meaning, thus associating it with empathy. Of note for the current study is the role that intonation plays in sentence modality. In languages like English and Spanish, identical strings of words can be produced with different intonation contours to distinguish it as a declarative and an interrogative. It has already been shown that higher empathy late bilinguals are more sensitive to intonation for distinguishing sentence modality [@casillas2023using], but the specific mechanisms have yet to be elucidated.
+Accurate parsing of intonation is critical in Spanish, as induced earlier, to accurately interpret if an utterance is a declarative or absolute interrogative (among other functions), but it remains an understudied topic [@sanchez2020production]. Recent behavioral research has investigated the acquisition of intonation in L2 Spanish speakers, specifically investigating the perception of declaratives versus interrogatives [@brandl2020development; @casillas2023using].
 
-Recent behavioral studies have investigated the role of empathy in the perception of intonation in both monolingual and bilingual populations. In monolingual populations, for example, @orrico2020individual found that higher empathy Italian monolinguals have access to finer-grain distinctions in intonation-meaning mapping. Also in a monolingual population, @esteve2020empathy used a visual world paradigm eye-tracking task with French monolinguals that resembled a card guessing game in which target items were homophones. Only after the target item was the homophone lexically disambiguated. Importantly, the temporary lexical ambiguity caused by the target items could be resolved with an intonational cue. @esteve2020empathy found that only higher empathy individuals varied their looking behavior, conditioned by the intonational cue. Interestingly, their looking behavior actually focused on the distractor image, not the correct image. Due to the unexpected results, @esteve2020empathy completed a post hoc off-line behavioral task in which participants listened to the sentence only up to the target homophone (and thus, the homophone is never lexically disambiguated) and had to match the homophone to the correct image. Higher empathy individuals were significantly more accurate than lower empathy individuals. @esteve2020empathy explain the unexpected eye-tracking results by proposing that higher empathy are more sensitive to all possible alternative interpretations, but still map intonation to the most plausible. This proposal is in line with what @baron2004empathy describes as the cognitive component of empathy, and has correspondences with Theory of Mind [@frith2003development].
+@brandl2020development realized a two-alternative forced choice task with L1 English L2 Spanish speakers of varying proficiency, which they operationalized as Beginners I and II, Intermediates I and II, and Advanced. Participants were shown a sentence on the computer screen which ended with a terminal stop (.) or a question mark (?), and they had to decide if the auditory stimulus of the same sentence given to them matched the punctuation. They found that absolute interrogatives were the most difficult sentence type for Spanish learners to process, finding a jump in accuracy between Intermediate II and Advanced. Furthermore, reaction times for yes-no questions were the only sentence type for which match and mismatch conditions did not differ significantly. 
 
-In the first study that investigates interactions of empathy and intonation in a bilingual population, @casillas2023using conceptually replicates @brandl2020development. L1 English L2 Spanish participants listened to sentences and had to explicitly decide if it was a question or not. @casillas2023using found an interaction between empathy and Spanish proficiency, measured by vocabulary size via the LexTALE [@izura2014lextale], such that lower proficiency individuals with higher empathy were more accurate. Interestingly, they found that these same individuals were also slower than their low empathy counterparts. However, @casillas2023using did not control for the specific intonational contours present in the stimuli, such that there was variety within and across speakers of different varieties. The present study controls for the intonational contour, specifically boundary tones.
+Importantly, @brandl2020development included 8 dialects of Spanish in the stimuli, two of which were Caribbean varieties. Caribbean varieties of Spanish are known to use a falling boundary tone to mark absolute interrogatives [@armstrong2010puerto]. In light of LILt [@mennen2015beyond], identifying Caribbean absolute interrogatives would be particularly difficult for L1 English L2 Spanish learners, as English absolute interrogatives are typically signaled with rising boundary tones. Despite this, @brandl2020development did not include speaker variety as a variable in her analysis. 
 
-## EEG
+@casillas2023using presented a conceptual replication of @brandl2020development. In the presentation of stimuli, @casillas2023using presented only audio stimuli in a two-alternative forced choice task in which participants had to decide if the utterance was a question or not. Included in their analysis was the effect of speaker variety on accuracy and reaction time. @casillas2023using found that participants were least accurate when identifying sentence modality for Puerto Rican and Cuban speakers, in line with the LILt model's [@mennen2015beyond] predictions on L2 intonation acquisition. In regards to overall accuracy, @casillas2023using had similar results to @brandl2020development. That is, the accuracy of yes-no questions increased dramatically as proficiency increased, indicating the difficulty of identifying absolute interrogatives for L2 Spanish learners.
 
-### Empathy
+The present study focuses on the perception of secondary cues for identifying absolute interrogatives in Spanish learners, a sentence type that has been shown to be particularly difficult for learners to acquire. Although the boundary tone is seen to be the most important cue to identifying sentence modality [@face2007role], it seems that native speakers use earlier, secondary cues to predict if a sentence is a declarative or interrogative. The present study investigates the integration of those secondary cues in the on-line sentence processing of Spanish learners.
 
-Empathy has remained largely uninvestigated using neurolinguistic methodologies, such as electroencephalogram (EEG) or fMRI, despite the growing behavioral evidence indicating that it impacts both monolingual and bilingual language processing. @aziz2010common performed an fMRI study to investigate if production and perception of intonation was modulated by empathy. Unlike the previously mentioned studies, @aziz2010common used the Interpersonal Reactivity Index [@davis1983measuring] and the Psychopathic Personality Inventory-Revised [@lilienfeld2005psychopathic] as measurements of empathy, as well as an off-line prosodic ability test. 
+## L2 Intonation Processing (Cognitive Studies) {#sec-l2-cognitive}
 
-In the on-line production task, participants were asked to produce the nonsense phrase "da da da da da" with varying intonation that matched a presented image of a smiling, sad, questioning or neutral face. In the on-line perception task, they were presented no image, but listened to the phrase "da da da da da". @aziz2010common found that higher empathy individuals showed more activity during the perception of emotional, but not neutral, intonation in premotor areas, including the bilateral inferior frontal gyrus and premotor cortex. They propose that the increased activity is related to simulation processes in the motor-related areas. That is, higher empathy individuals, in the vein of *cognitive empathy*, simulate how they would produce the given intonation to understand someone else's.
+The Interface Hypothesis [@sorace2011pinning] proposes that L2 speakers will have difficulties when they must combine cross-domain information (e.g., prosody and syntax), but behavioral evidence suggests that this is L1-dependent, and the actual difficulty is, at least in part, modulated by transfer effects. For example, @ortega2014l2 performed a study with L1 Mandarin and L1 Spanish speakers learning English. L1 Mandarin and L1 Spanish speakers were presented a question (e.g., "Did Bobby fall out of the tree?") and they had to choose the appropriate response from three possible options, all of which differed only in intonation (e.g., "TOBY fell out of the tree"; "Toby FELL OUT of the tree"; "Toby fell out of the tree). It was found that L1 Mandarin speakers performed similarly to L1 English speakers, but L1 Spanish speakers were significantly less accurate. @ortega2014l2 attributed the differences to L1-L2 transfer effects: Mandarin and English pattern similarly in marking focus using prosodic strategies, whereas Spanish typically uses syntactic strategies to mark focus.
 
-### Intonation
+Associative Learning theory [@kamin1969selective] proposes individuals who learn a particular stimulus-outcome situation, later stimulus that map to the same outcome are more difficult to acquire. That is, early learners of a language tend to focus on only one cue that maps to an outcome. @ellis2010learned, for example, demonstrated that individuals who were trained to focus either on adverb or verb conjugation to acquire tense in Latin tended to ignore the cue that they were not explicitly taught. That is, they had a one-to-one mapping, instead of the many-to-one mapping that is typical of language. 
 
-Although there is little research using neurolinguistic methodologies for Spanish or English intonation, there does exist a variety of works on Mandarin [@lu2015intonation; @li2018temporal], Catalan [@borras2012role], German [@kharaman2019processing; @lialiou2024auditory], and a variety of Limburgish [@fournier2010lateralization].
+Associative Learning theory may also be seen in a study by @ganga2024prosodic. @ganga2024prosodic investigated prosodic transfer effects, focusing on the perception of contrastive pitch accents triggered by *only* in L1 Dutch L2 English using EEG. English *only* and the Dutch equivalent *alleen* are similar semantically and always coupled with a pitch accent elsewhere in the utterance. Crucially however, English *only* typically remains in preverbal position regardless of the focused element, whereas Dutch *alleen* is placed adjacent to the focused element, whether it be the verb or object. @ganga2024prosodic hypothesized that the English learners would perform similarly to native English speakers when *only* was adjacent to the focused element, but differently when nonadjacent. Although their first hypothesis was supported, there was evidence against their second hypothesis: L1 Dutch and L1 English performed similarly when *only* was nonadjacent, both demonstrating a N400-like component. They attributed these unexpected results to prediction: since object-focus with *only* doesn't allow for a pitch accent on the verb, participants can already predict that the focused item will be the object when they hear the unaccented verb, and so they ignore the superfluous pitch accent on the object. This could be interpreted as supporting the Associative Learning theory, in that individuals are paying attention to only one cue in the sentence for cue-to-outcome mapping.
 
-@li2018temporal investigates the temporal processing of intonation in Mandarin Chinese by comparing F0 changes produced by intonation or lexical tone in two tasks. In the intonation task, participants identified whether the sentence was a statement or question; in the tone task, participants identified the tone (tone 2 or tone 4) of the final word. They found that participants processed intonation first in both tasks: around 150-200ms in the first task, and 100ms in the second.
+Both the Interface Hypothesis and the Associative Learning theory may be applied to the current study. From the Interface Hypothesis, it would be expected that L1 English L2 Spanish speakers would have difficulties identifying sentence type in Spanish, due to the cross-domain interface (i.e., intonation and pragmatics). This prediction is borne out in behavioral studies [@brandl2020development; @casillas2023using]. However, this would be modulated by transfer effects, as both English and Spanish mark absolute interrogatives with similar utterance-final rises. The current study is further informed by the Associative Learning theory, which predicts that early Spanish learners will pay attention to *only* the boundary tone, and ignore any other cues, such as the height of the initial pitch accent.
 
-### Wrap up Effects
+# The Present Study {#sec-present}
 
-One of the earliest EEG correlates of intonation discovered is the Closure Positive Shift [CPS; @steinhauer1999brain; @steinhauer2003electrophysiological]. 
+Traditional analysis of Spanish intonation posits that the final boundary tone determines if a sentence is a declarative (L%) or an absolute interrogative (H%) [@tomas1944manual]. However, @face2007role has found that there exist other intonational cues earlier in the speech stream that cue sentence modality. In a behavioral gating experiment, @face2007role determined that L1 Spanish speakers can accurately determine sentence modality as early as the first pitch accent (i.e., the first stressed syllable) of an utterance due to the higher pitch peak in interrogatives. Although the final boundary tone was found to be the most informative cue for sentence modality, almost deterministic in nature, it appears that native speakers make use of the first pitch peak as a secondary cue to determine sentence modality.
 
-## Summary
+With respect to Spanish learners, @bedialauneta2023perception investigated secondary cue to determine sentence modality in a two-alternative force task, where participants had to identify if an auditory stimulus was a question or not. Although she did not report proficiency for L2 participants, all L2 participants had over 5 years of Spanish learning experience. She found that participants relied on universal tendencies to interrogation, primarily using the final boundary tone to identify sentence modality, whereas native speakers variably integrated other cues to determine sentence modality.
 
-In sum, there is clear evidence that empathy impacts both monolingual and bilingual processes, but in exactly what ways are still unclear. @esteve2020empathy propose that higher empathy monolinguals compute more possible interpretations, which seems to imply longer processing time. This prediction is borne out by @casillas2023using, where higher empathy bilinguals had slower reaction times (although overall more accurate responses) than their lower empathy counterparts. This study attempts to elucidate which part of sentence processing is responsible for the slower reaction times.
+Although intonational cues in the speech stream before the boundary tone are evidently not deterministic for deciding sentence modality [@face2007role; @bedialauneta2023perception], Spanish learners may still be sensitive to them during on-line sentence processing. The present study investigates if Spanish learners are sensitive to early intonational cues during on-line sentence processing while determining if a sentence is a declarative or information-seeking absolute interrogative. This study builds on the previous work by reporting proficiency scores and language use information for participants.
 
-# Research Questions and Hypotheses
+# Research Questions and Hypotheses {#sec-rq-hypo}
 
-1) Is reaction time to identifying sentence modality in Spanish by L1 English L2 Spanish late bilinguals modulated by empathy?
+Due to the limited research on on-line processing of intonation in L2 speakers, the research questions are exploratory in nature, and the hypotheses are informed by behavioral research.
 
-This is expected to be the case, based off of research conducted by @casillas2023using.
+1. Are Spanish learners sensitive to early intonational cues that signal if an utterance is a declarative or absolute interrogative?
 
-2) Are high empathy bilinguals more sensitive to intonation when identifying sentence modality?
+From behavioral studies, L1 Spanish speakers seem to be sensitive to the first pitch accent of an utterance for determining if the utterance is a declarative or absolute interrogative. Due to the difficulty that Spanish learners have when identifying sentence modality [@brandl2020development; @casillas2023using], I predict that learners will not universally show sensitivity to the secondary intonational cue (i.e., the height of the first pitch accent). This will be demonstrated by a lack of an N400 on the following pitch accents, including the final nuclear configuration. However, it is predicted that sensitivity will be modulated by other factors, such as proficiency and study abroad experience.
 
-This is expected to be the case, based off of research conducted by @casillas2023using.
+2. Is sensitivity to early intonational cues modulated by proficiency?
 
-3) In mismatch conditions, are greater N400 components associated with high empathy individuals?
+It has been seen that L2 proficiency modulates behavioral accuracy when identifying sentence type [@brandl2020development; @casillas2023using]. This study will provide cognitive evidence for the role of proficiency on the sensitivity to secondary intonation features during on-line sentence processing by Spanish learners. It is predicted that high-proficiency Spanish learners will be able to integrate more intonational information in the speech stream during on-line sentence processing, such that they will pay more attention to the first pitch accent to determine if an utterance is a broad focus declarative or information-seeking absolute interrogative.
 
-It is expected that high empathy individuals are more sensitive to intonation, which will present itself as a greater violation of expectations in mismatch conditions, eliciting larger a larger N400.
+# Methodology {#sec-methods}
 
-4) In match conditions, do high empathy individuals exhibit more broadly distributed late positivity components (e.g. P600) than their low empathy counterparts?
+## Participants {#sec-part}
 
-High empathy individuals take longer to decide if an utterance is an interrogative or declarative [@casillas2023using], and it is predicted that the longer processing time is associated with late components. This prediction is based on the proposal by @esteve2020empathy, who posited that high empathy individuals take into account all possible interpretations. This is expected to be seen as a late, broadly distributed ERP component.
+This study focused on L1 English L2 Spanish late bilinguals with varying levels of proficiency. *n* participants (*n* females), with an age range of *min* to *max* (mean = *mean*) were recruited to partake in the study. Late bilingualism, in this study, was operationalized as individuals who began to learn Spanish after the age of 13. Participants were recruited from college Spanish classes. Participants spoke a language other than English in their household, or who self-reported proficiency in another language other than English and Spanish, were excluded. All participants included in this study were right-handed. Participant proficiency ranged from *min* to *max*, as we were interested in how the acquisition of secondary intonational cues developed in a range of proficiencies.
 
-5) Where Spanish and English do not coincide in the marking of sentence type with boundary tone (e.g., Puerto Rican fall for absolute interrogatives, where English would have a rise), do high empathy individuals exhibit lower N400s?
+## Stimuli {#sec-sti}
 
-High empathy individuals were found to be more accurate at identifying sentence modality [@casillas2023using]. This study will investigate if the boundary tone is perhaps the main cue for identifying sentence modality. It is expected that in low empathy individuals, their main cue will be the boundary tone. When it does not coincide with the boundary tone expected in English, they will exhibit larger N400s, whereas high empathy individuals will exhibit a smaller, if any, N400 [@mennen2015beyond]. 
+The stimuli were recorded by a native speak of *VARIETY* Spanish. The speaker produced syntactically and lexically identical utterances, once produced as a broad focus declarative utterance (@fig-original-d) and again as an information-seeking absolute interrogative (@fig-original-q). The utterances were then manipulated using the stylize pitch feature in Praat [@boersma2024praat]. For the manipulated stimuli, the first pitch accent was manipulated to heighten or lower the peak for the declarative (@fig-manipulated-d) or interrogative (@fig-manipulated-q), respectively. The modified pitch peak heights were decided based on the corresponding utterance's pitch peak height.
 
-# Methodology
+```{r}
+#| label: fig-original-d
+#| fig-cap: "Original spectrogram with pitch contour for the broad focus declarative, 'Ana lleva el abrigo' (Ana is wearing the coat)."
 
-Participants will see fixation cross. See image of person with speech bubble. Inside speech bubble is a period or question mark. Image disappears. Listen to sentence (which will have a rising or falling boundary tone, coinciding with natural intonation across Spanish varieties). Text appears on screen: "¿La frase coincide con la imagen?" Participants clicks keyboard key for yes or no.
+knitr::include_graphics(
+  here("exp", "figs", "original_declarative.png")
+  )
+```
 
-Area of interest: start of final syllable.
+```{r}
+#| label: fig-original-q
+#| fig-cap: "Original spectrogram with pitch contour for the information-seeking absolute interrogative, '¿Ana lleva el abrigo?' (Ana is wearing the coat?)."
 
-Independent variables:
-  empathy
-  proficiency (lextale)
-  boundary tone (H, L)
-  match with English
-  sentence type       EN boundary tone        ES boundary tone        match?
-  y-n Q               H%                        H% or L%                meh
-  wh- Q               H%                        L%                    no
-  declaratives        L%                        L%                    yes
+knitr::include_graphics(
+  here("exp", "figs", "original_question.png")
+  )
+```
 
-# Scraps
+```{r}
+#| label: fig-manipulated-d
+#| fig-cap: "Manipulated pitch contour for the utterance 'Ana lleva el abrigo.' (Ana is wearing the coat)"
 
-Maybe just single, three-syllable penultimate stressed words? control for syllable structure e.g., CV.CV.CV CVC.CVC.CVC CV.CVC.CV CV.CVC.CVC CV.CV.CVC. 
+knitr::include_graphics(
+  here("exp", "figs", "fig_p1-q_base-d.png")
+  )
 
-Closure Positivity needs to be addressed.
+```
 
-Empathy/Proficiency only interacted for wh- questions, broad focus statements, and narrow focus statements for accuracy. Response times for all conditions were impacted by empathy/proficiency interaction. Higher empathy individuals took longer to respond (Casillas).
+```{r}
+#| label: fig-manipulated-q
+#| fig-cap: "Manipulated pitch contour for the utterance '¿Ana lleva el abrigo?' (Is Ana wearing the coat?"
+knitr::include_graphics(
+  here("exp", "figs", "fig_p1-d_base-q.png")
+  )
+```
 
-Empathy [@baron2004empathy] has been found to modulate perception of intonation in the L1 [@orrico2020individual; @esteve2020empathy], as well as the L2 [@casillas2023using], but the specific neurophysiological correlates that underlie empathy's role in intonation processing remain uninvestigated. In the L1, higher empathy individuals have been found to show more granular interpretations of epistemic bias [@orrico2020individual] and to be more sensitive to intonational cues when developing a set of possible interpretations and selecting the most likely one [@esteve2020empathy]. In the L2, higher empathy individuals have been found to respond more accurately, albeit slower, when determining if a spoken sentence is a declarative or interrogative [@casillas2023using]. The current research aims to contribute to the growing body of literature on the role of pragmatic skills and individual differences on L2 acquisition by investigating L1 English L2 Spanish late bilinguals by investigating Event-Related Potential (ERP) correlates of empathy in intonation processing. Specifically, continuing the line of research began by @casillas2023using, are there 
+In total, there were four conditions in a 2X2 design: (1) the original declarative, (2) the original absolute interrogative, (3) the declarative utterance with the first pitch accent peak lowered, and (4) the interrogative utterance with the first pitch accent peak heightened. All conditions can be seen in @tbl-conditions. Each condition had 80 items, for a total of 320 items.
 
-The extant research on language processing has identified that individual differences is a consequential factors for the L2 acquisition process. 
+```{r}
+#| label: tbl-conditions
+#| tbl-cap: "Stimuli."
 
-For example,  experience-based factors in bilingual language use impacts brain structure and functional connectivity [@deluca2019redefining]; 
+conditions <- data.frame(
+  condition = c("declarative", "absolute interrogative"),
+  sentence_type = c("info-seeking absolute interrogative", "info-seeking absolute interrogative", "braod focus declarative", "braod focus declarative"),
+  pa_1 = c("original", "lowered", "original", "heightened")
+)
 
-Although there exists research investigating the effects of bilingualism on the development or modulation of empathy [@rodriguez2022language; @javor2016bilingualism], empathy has received little attention in contemporary research as a modulating factor of linguistic processing. Researchers from the 60s and 70s [e.g., @guiora1972empathy] have tried to link empathy to "authentic pronunciation" of an L2, but no strong associations have been found. 
+kable(
+  conditions,
+  format = "markdown",
+  col.names = c("Condition", "Sentence Type", "First Pitch Accent Peak")
+)
 
-Empathy is responsible for allowing individuals to infer another's mental state, which is critical for establishing and updating common ground [@stalnaker2002common]. Furthermore, empathy is critical in understanding an interlocutor's sarcasm or insincere utterance [@filik2019difference].
+```
 
-"It is interesting to notice that most of our ERP results are found in the parietal area, which is
-consistent with the previous findings of intonation and tone effects in centro-parietal area (Kung et
-al., 2014; Liu et al., 2016)."
+## Tasks {#sec-tasks}
+
+All data were collected individually in one session (approximately 1.5 hours). Participants first completed a Spanish proficiency test before the experiment (15 min), and then completed the two-alternative forced choice task, which was monitored using EEG (1 hour). 
+
+### Proficiency Assessment {#sec-prof}
+
+Participants first completed a Spanish proficiency test. The test was an abbreviated version of the *Diploma de Español como Lengua Extranjera* (DELE), which has been used in previous studies (e.g., @lozano2021interpreting). The test consists of 56 multiple choice questions that assess grammar and vocabulary knowledge. Correct answers receive one point, and incorrect answers receive zero. No minimum score was required to participant in this experiment, as a range of Spanish proficiencies was desired for analysis.
+
+### Two-Alternative Forced Choice Task {#sec-2afc}
+
+For the two-alternative forced choice task, participants were tasked with identifying if an item was a question or not using the keyboard. Participants typed "1" for "yes" (i.e., "yes, this is a question") or "0" for "no" (i.e., "no, this is not a question). Each participant completed one of two versions of the task, which included 20 target items from each condition. Participants did not encounter any lexically/syntactically identical items (such that if a participant was exposed to "Ana lleva el abrigo" in Condition 1, they were not exposed to the same utterance in any other condition). In total, participants were exposed to 80 total target items.
+
+## Procedure {#sec-proc}
+
+Subjects were seated in a comfortable chair located in a sound and electrically attenuated room. They were instructed to keep their eyes fixated on a fixation cross on the monitor and to avoid movement as much as possible, including eye movements, blinks, and jaw clenching, as well as to remain as relaxed as possible. Acoustic stimuli were presented via *computer information* through *headphone information*.
+
+Participants were familiarized with the task through the same 32 training items. They were instructed to decide if an utterance was a question or not by using the keyboard (0 for no, 1 for yes) as accurately as possible once the audio stimulus ended. They were signalled to respond once the audio ended with a question mark "?" that appeared on the screen. They did not receive feedback for accuracy during the training or during the experimental items. After the training, participants were randomly assigned Version 1 or Version 2 of the task.
+
+During the training and experimental items, participants were instructed to fixate on a fixation cross on the computer screen. The fixation cross remained on the screen during the entirety of the audio stimulus, and as soon as the audio stimulus finished, a question mark "?" appeared on the screen, signalling for them to decide if the utterance was a question or not. The interval between stimuli varied between 2.5 and 5.0 s. Every 15 items, participants took a 3-5 min break, during which they could move about and stretch.
+
 
 {{< pagebreak >}}
 

@@ -1,16 +1,12 @@
 ---
 title             : |
-  "¿Es una Pregunta?": An ERP Study on the Perception of Early Intonational Cues in Spanish Learners
+  "¿Are You Asking?": An ERP Study on the Perception of Early Intonational Cues in Spanish Learners
 shorttitle        : "ERP: Early Intonational Cue Perception in L2 Spanish"
 author            : 
   - name: Robert Esposito
     corresponding: true
     affiliations: Rutgers University
     email: rme70@rutgers.edu
-  - name: Nuria Sagarra
-    affiliations: Rutgers University
-    email: nuria.sagarra@rutgers.edu
-    orcid: 0000-0002-9820-3935
 
 bibliography      : "./lit/neuro_bib.bib"
 csl               : "./lit/apa_7th_edition.csl"
@@ -19,7 +15,7 @@ indent: true
 format:
   docx:
     reference-doc: "./ref_doc/apa_style.docx"
-    number-sections: true
+    number-sections: false
     highlight-style: github
     code-line-numbers: true
     fig-align: center
@@ -76,7 +72,7 @@ Correspondence concerning this article should be addressed to Robert Esposito, R
 
 Accurately parsing intonation is crucial for a language like Spanish, where declaratives and absolute interrogatives are syntactically and lexically, and only differ in intonation. Although the final pitch movement is the main cue for determining sentence modality in Spanish, the first pitch peak of the utterance acts as a secondary cue [@face2007role]. This study uses EEG to investigate the sensitivity to early pitch accents for identifying sentence modality in L1 English L2 Spanish individuals of varying proficiency levels. Participants completed a two-alternative forced choice task, in which they were tasked with identifying an utterance was question or not. In the target items, participants were exposed to utterances in which the first pitch accent peak was manipulated to be higher (for base-declarative utterances) or lower (for base-interrogative utterances). Under the Associative Learning hypothesis [@kamin1969selective], it would be expected that the initial learners of Spanish pay attention only to the final pitch movement to determine sentence modality, which is the most salient cue and, in most varieties of Spanish, follows universal language tendencies. Due to this, the manipulated stimuli would elicit no N400, which has been seen to be elicited by anomalous pitch accents. Advanced learners, on the other hand, would be sensitive to other intonational cues, such as the peak height of the first pitch accent, and the anomalous pitch accent would thus elicit an N400.
 
-*Keywords:* ERP, EEG, prosody, intonation, suprasegmental, interrogatives
+*Keywords:* ERP, EEG, prosody, intonation, suprasegmental, interrogatives, perception
 
 *Word count:* WORD_COUNT
 
@@ -85,33 +81,21 @@ Accurately parsing intonation is crucial for a language like Spanish, where decl
 
 # `r rmarkdown::metadata$title`
 
-# Introduction {#sec-intro}
+As early as infancy, humans are sensitive to fundamental frequency (F0), which is the key component of intonation. In perception, newborns are sensitive to the F0 signal in singing and continuous speech [@sambeth2008sleeping]; in production, newborn cry melodies are shaped by the intonation of their native language [@prochnow2019does]. As early as 5 months old, infants acquiring European Portuguese can distinguish between statements and yes-no questions [@frota2014infants]. Despite intonation being one of the first linguistic features acquired by humans in life, intonation has often been relegated as ancillary to a language's grammar. Intonational phonologists have pushed for its recognition as just as central to a language as its syntax or semantics [for a review, see @ladd2008intonational]. 
 
-Native speakers integrate intonational cues in the speech stream temporally early in on-line speech processing [@li2018temporal], but do learners make use of the same cues? In Spanish, declaratives and absolute interrogatives are syntactically and lexically ambiguous [@tbl-eg-sentences]; they are only disambiguated at the intonational level through modulation of fundamental frequency (F0), the rate of vocal fold vibration perceived as pitch. Traditional analysis of Spanish prosody typically points to the final F0 movement of an utterance in determining if an utterance is a declarative or interrogative [@tomas1944manual], but recent research by @face2007role has determined in a gating experiment that native Spanish speakers can distinguish between a declarative and absolute interrogative as early as the first stressed syllable of the sentence. Do learners of Spanish make use of the same intonational cues to predict sentence modality?
+Both native speakers (L1 speakers) and second language learners (L2 speakers) must accurately produce or perceive the intonation to prevent communicative breakdowns. In spoken language produced or perceived by adults, for example, distinguishing a sarcastic exclamation and a genuinely complimentary one in English (e.g., "How smart she is!") requires the correct parsing of intonation, as the utterance is identical at the lexical (word) and syntactic (word-order) levels [@zhou2019detecting]. Even more quotidian, Spanish declarative and absolute interrogatives (i.e., yes-no questions) are similarly distinguished only at the level of intonation: *Mariano habla del tiempo* "Mariano talks about the weather" versus *¿Mariano habla del tiempo?* "Does Mariano talk about the weather?"  Traditionally, only the final F0 movement of the utterance (e.g., the F0 movement in the final syllable "po" in "tiempo") is analyzed as providing the disambiguating "key" to determine sentence modality (i.e.,, if an utterance is a declarative or an absolute interrogative; @tomas1944manual). However, @face2007role has determined in an off-line gating experiment that L1 Spanish speakers can distinguish between these two sentence types as early as the first word, which carries the first complete F0 movement [for a full review, see @sec-present].
 
-```{r}
-#| label: tbl-eg-sentences
-#| tbl-cap: "Spanish declarative and absolute interrogative."
+Although it seems that L1 Spanish speakers can distinguish between a declarative and absolute interrogative as early as the first pitch movement, it is not yet known if they integrate the same information in on-line sentence processing. 
 
-eg_sentences <- data.frame(
-  sentence_type = c("declarative", "absolute interrogative"),
-  spanish = c("Mariano habla del tiempo.", "¿Mariano habla del tiempo?"),
-  english = c("Mariano talks about the weather.", "Does Mariano talk about the weather?")
-)
+The present study aims to determine if L1 and L2 Spanish speakers are sensitive to the early intonational cues identified by @face2007role during on-line sentence processing using electroencephalogram (EEG) during a two-alternative forced choice task (FCT).
 
-kable(
-  eg_sentences,
-  format = "markdown",
-  col.names = c("Sentence Type", "Spanish", "English")
-)
 
-```
 
-# Background and Motivation {#sec-background}
+# Background {#sec-background}
 
 ## Autosegmental Metrical Framework {#sec-am}
 
-While some languages simultaneously use F0 to encode semantic meaning at the lexical level (e.g., Mandarin Chinese or Swedish), all languages make use of F0 to encode pragmatic meaning [@arvaniti2020autosegmental] such as sentence type or affect. Spanish and English are among the languages that modulate F0 to provide syntactic structure [@steinhauer1999brain] and pragmatic information [@ladd2008intonational].
+While some languages simultaneously use F0 to encode semantic meaning at the lexical level (e.g., Mandarin Chinese or Swedish), all languages make use of F0 to encode pragmatic meaning [@best2019diversity; @arvaniti2020autosegmental] such as sentence type or affect. Spanish and English are among the languages that modulate F0 to provide syntactic structure [@steinhauer1999brain] and pragmatic information [@ladd2008intonational].
 
 The Autosegmental Metrical (AM) model of intonation [@pierrehumbert1980submitted; @ladd2008intonational] attempts to map the continuous F0 contour to phonologically discrete, sequential tone targets. Tone targets can be H(igh), L(ow), or a combination of the two to represent rises (LH) or falls (HL), which are organized as either pitch accents, anchored to the stressed syllable, or edge tones anchored to prosodic boundaries. Edge tones are furthered divided into phrase accents and boundary tones, anchored to non-terminal prosodic boundaries and the Intonation Phrase boundary, respectively. Using the Tones and Breaks Indices (ToBI), the annotation tool used within AM, pitch accents are indicated with \* (e.g., H\*); non-final edge tones with - (e.g., H-); and boundary tones with % (e.g., H%). These representations and phonetic realizations are part of a many-to-many relationship, such that a single representation, such as H+L\*, may have various phonetic realizations. This parallels segmental phonology, where a single segment, such as the Spanish /b/, may have various realizations depending on numerous contextual factors, such as a bilabial plosive, bilabial approximant, or labio-dental fricative. 
 
